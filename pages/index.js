@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -11,14 +13,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <motion.main
+        className={styles.main}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}>
         <div className="text-6xl font-bold">
           <h1>Hi! I'm</h1>
           <h1 className="text-secondary">Quentin Gilmart</h1>
         </div>
 
         <Image src="/Logo.svg" width={100} height={100} />
-      </main>
+      </motion.main>
 
       <footer className={styles.footer}>
         <a
