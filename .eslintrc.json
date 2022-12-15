@@ -1,3 +1,106 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "plugin:cypress/recommended",
+    "plugin:eslint-comments/recommended"
+  ],
+  "plugins": ["prettier", "jest", "cypress"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/destructuring-assignment": ["error", "always"],
+    "no-underscore-dangle": 0,
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error",
+    "quotes": ["error", "single", {
+      "avoidEscape": true
+    }],
+    "complexity": ["error", 8],
+    "max-statements": ["error", 40],
+    "max-lines": ["error", 300],
+    "max-params": ["error", 5],
+    "no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "all",
+      "argsIgnorePattern": "^_"
+    }],
+    "semi": ["error", "always"],
+    "comma-spacing": ["error", {
+      "before": false,
+      "after": true
+    }],
+    "comma-dangle": ["error", "never"],
+    "no-trailing-spaces": "error",
+    "no-irregular-whitespace": "error",
+    "camelcase": 0,
+    "no-console": ["error"],
+    "prettier/prettier": [
+      "error",
+      {
+        "parser": "babel",
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": true,
+        "semi": true,
+        "useTabs": false,
+        "tabWidth": 2,
+        "arrowParens": "always",
+        "printWidth": 120,
+        "endOfLine": "auto"
+      }
+    ],
+    "import/prefer-default-export": "warn",
+    "react/display-name": "off",
+    "react/jsx-props-no-spreading": 0,
+    "react/no-unescaped-entities": 0,
+    "react/prop-types": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "sort-vars": "error",
+    "sort-imports": ["error", {
+      "allowSeparatedGroups": true,
+      "ignoreDeclarationSort": true
+    }],
+    "eslint-comments/disable-enable-pair": ["error", {
+      "allowWholeFile": true
+    }],
+    "eslint-comments/no-unused-disable": "error"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "env": {
+    "cypress/globals": true,
+    "jest/globals": true
+  },
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
 }
