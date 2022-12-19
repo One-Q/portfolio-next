@@ -13,29 +13,36 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Image src="/Logo.svg" width={50} height={50} />
-      <main className={styles.main}>
-        <div className="text-6xl font-bold">
-          <h1 className="overflow-hidden relative">
-            <motion.span
-              className="absolute"
-              initial={{ opacity: 1, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}>
-              Hi! I'm
-            </motion.span>
-            <span className="invisible">Hi! I'm</span>
-          </h1>
-          <h1 className="overflow-hidden relative" style={{ WebkitTextFillColor: 'transparent' }}>
-            <motion.span
-              className="absolute text-secondary bg-clip-text bg-gradient-to-r from-primary to-secondary"
-              initial={{ opacity: 1, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1 }}>
-              Quentin Gilmart
-            </motion.span>
-            <span className="invisible">Quentin Gilmart</span>
-          </h1>
+      <main className="flex h-screen flex-col">
+        <header className="container mx-auto py-8">
+          <Image src="/Logo.svg" alt="Vercel Logo" width={32} height={32} />
+        </header>
+        <div className="container mx-auto flex items-center flex-1 pb-24">
+          <div className="flex justify-between">
+            <div className="text-6xl font-bold">
+              <h1 className="overflow-hidden relative">
+                <motion.span
+                  className="absolute"
+                  initial={{ opacity: 1, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.5 }}>
+                  Hi! I'm
+                </motion.span>
+                <span className="invisible">Hi! I'm</span>
+              </h1>
+              <h1 className="overflow-hidden relative" style={{ WebkitTextFillColor: 'transparent' }}>
+                <motion.span
+                  className="absolute text-secondary bg-clip-text bg-gradient-to-r from-primary to-secondary"
+                  initial={{ opacity: 1, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 1 }}>
+                  Quentin Gilmart
+                </motion.span>
+                <span className="invisible">Quentin Gilmart</span>
+              </h1>
+            </div>
+            <div />
+          </div>
         </div>
       </main>
 
@@ -46,7 +53,7 @@ export default function Home() {
           rel="noopener noreferrer">
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/logo.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
