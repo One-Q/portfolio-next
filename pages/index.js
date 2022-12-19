@@ -13,18 +13,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.main
-        className={styles.main}
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}>
+      <Image src="/Logo.svg" width={50} height={50} />
+      <main className={styles.main}>
         <div className="text-6xl font-bold">
-          <h1>Hi! I'm</h1>
-          <h1 className="text-secondary">Quentin Gilmart</h1>
+          <h1 className="overflow-hidden relative">
+            <motion.span
+              className="absolute"
+              initial={{ opacity: 1, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}>
+              Hi! I'm
+            </motion.span>
+            <span className="invisible">Hi! I'm</span>
+          </h1>
+          <h1 className="overflow-hidden relative" style={{ WebkitTextFillColor: 'transparent' }}>
+            <motion.span
+              className="absolute text-secondary bg-clip-text bg-gradient-to-r from-primary to-secondary"
+              initial={{ opacity: 1, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1 }}>
+              Quentin Gilmart
+            </motion.span>
+            <span className="invisible">Quentin Gilmart</span>
+          </h1>
         </div>
-
-        <Image src="/Logo.svg" width={100} height={100} />
-      </motion.main>
+      </main>
 
       <footer className={styles.footer}>
         <a
