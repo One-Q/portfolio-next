@@ -19,11 +19,11 @@ export default function Home() {
         </header>
         <div className="container mx-auto flex items-center flex-1 pb-24">
           <div className="flex justify-between">
-            <div className="text-6xl font-bold">
+            <div className="text-3xl sm:text-4xl font-bold">
               <h1 className="overflow-hidden relative">
                 <motion.span
                   className="absolute"
-                  initial={{ opacity: 1, y: 150 }}
+                  initial={{ opacity: 1, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5 }}>
                   Hi! I'm
@@ -33,7 +33,7 @@ export default function Home() {
               <h1 className="overflow-hidden relative" style={{ WebkitTextFillColor: 'transparent' }}>
                 <motion.span
                   className="absolute text-secondary bg-clip-text bg-gradient-to-r from-primary to-secondary"
-                  initial={{ opacity: 1, y: 150 }}
+                  initial={{ opacity: 1, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 1 }}>
                   Quentin Gilmart
