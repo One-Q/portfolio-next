@@ -23,7 +23,7 @@ export default function Home() {
               <h1 className="overflow-hidden relative">
                 <motion.span
                   className="absolute"
-                  initial={{ opacity: 1, y: 30 }}
+                  initial={{ opacity: 1, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5 }}>
                   Hi! I'm
@@ -33,7 +33,7 @@ export default function Home() {
               <h1 className="overflow-hidden relative" style={{ WebkitTextFillColor: 'transparent' }}>
                 <motion.span
                   className="absolute text-secondary bg-clip-text bg-gradient-to-r from-primary to-secondary"
-                  initial={{ opacity: 1, y: 30 }}
+                  initial={{ opacity: 1, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 1 }}>
                   Quentin Gilmart
