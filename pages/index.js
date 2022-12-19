@@ -19,7 +19,7 @@ export default function Home() {
         </header>
         <div className="container mx-auto flex items-center flex-1 pb-24">
           <div className="flex justify-between">
-            <div className="text-3xl sm:text-4xl font-bold">
+            <div className="text-4xl sm:text-6xl font-bold">
               <h1 className="overflow-hidden relative">
                 <motion.span
                   className="absolute"
