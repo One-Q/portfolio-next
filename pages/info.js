@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import styles from '../styles/Home.module.css';
 import { Header } from '../components';
 
-export default function Home() {
+export default function Info() {
   return (
     <div className="bg-background">
       <Head>
