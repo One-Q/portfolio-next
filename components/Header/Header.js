@@ -25,8 +25,6 @@ const Header = () => {
           <div key={link.text} className="relative ml-9">
             <Link href={link.path}>{link.text}</Link>
             <motion.div
-              animate="animate"
-              initial="initial"
               variants={getVariants(router, link)}
               transition={{ delay: 0.3 }}
               className="absolute w-full h-0 bg-secondary"
