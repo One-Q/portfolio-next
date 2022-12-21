@@ -12,14 +12,13 @@ const links = [
 
 const getVariants = (router, link) => ({
   initial: { height: 0 },
-  animate: { height: router.pathname === link.path ? 5 : 0 },
-  exit: { height: 0 }
+  animate: { height: router.pathname === link.path ? 5 : 0 }
 });
 
 const Header = () => {
   const router = useRouter();
   return (
-    <header className="container flex mx-auto py-8 justify-between">
+    <header className="container flex mx-auto py-8 justify-between  px-4">
       <Image src="/Logo.svg" alt="Vercel Logo" width={32} height={32} />
       <div className="font-bold flex">
         {links.map((link) => (
@@ -28,7 +27,6 @@ const Header = () => {
             <motion.div
               animate="animate"
               initial="initial"
-              exit="exit"
               variants={getVariants(router, link)}
               transition={{ delay: 0.3 }}
               className="absolute w-full h-0 bg-secondary"

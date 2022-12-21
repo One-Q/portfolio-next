@@ -1,10 +1,11 @@
 import { AnimatePresence } from 'framer-motion';
+
 import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimatePresence mode="wait" initial="initial" animate="animate" exit="exit">
-      <Component {...pageProps} />
+    <AnimatePresence mode="wait">
+      <Component key={router.pathname} {...pageProps} />
     </AnimatePresence>
   );
 }
