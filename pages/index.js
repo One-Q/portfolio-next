@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import { Header, PageTransition } from '../components';
+import { Header, Marquee, PageTransition } from '../components';
 
 export default function Home() {
   return (
@@ -43,6 +43,8 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <Marquee word="home" mode={5} />
 
       <footer className="flex flex-1 py-8 border-t-[1px] border-l-slate-400 justify-center items-center border-solid">
         <a

@@ -11,15 +11,15 @@
   "dependencies": {
     "framer-motion": "7.7.2",
     "next": "13.0.6",
+    "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.20",
     "@emotion/jest": "11.3.0",
     "@wojtekmaj/enzyme-adapter-react-17": "0.6.3",
+    "autoprefixer": "^10.4.13",
     "babel-eslint": "10.1.0",
     "cypress": "8.3.0",
     "enzyme": "3.11.0",
@@ -41,6 +41,7 @@
     "mochawesome-merge": "4.2.0",
     "mochawesome-report-generator": "5.2.0",
     "mutationobserver-shim": "0.3.7",
+    "postcss": "^8.4.20",
     "prettier": "2.3.2",
     "react-test-renderer": "17.0.2"
   }
