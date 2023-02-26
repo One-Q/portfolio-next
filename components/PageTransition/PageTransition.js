@@ -6,10 +6,10 @@ const variants = {
   exit: { opacity: 0 }
 };
 
-const Header = ({ children }) => (
+const PageTransition = ({ children }) => (
   <motion.div className="bg-background" variants={variants} animate="animate" initial="initial" exit="exit">
     {children}
   </motion.div>
 );
 
-export default Header;
+export default PageTransition;
