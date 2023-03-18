@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import { Header, PageTransition } from '../components';
+import { getProjects } from './api/projects';
 
 export default function Projects() {
   return (
@@ -30,4 +31,11 @@ export default function Projects() {
       </footer>
     </PageTransition>
   );
+}
+
+export async function getServerSideProps() {
+  const projects = await getProjects();
+  return {
+    props: { projects }
+  };
 }
