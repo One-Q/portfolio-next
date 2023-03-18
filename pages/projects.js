@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
-import { Header, PageTransition } from '../components';
+import { Header, PageTransition, ProjectCard } from '../components';
 import { getProjects } from './api/projects';
 
-export default function Projects() {
+export default function Projects({ projects }) {
   return (
     <PageTransition>
       <Head>
@@ -13,8 +14,21 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex h-screen flex-col">
-        <Header />
+      <main>
+        <div className="flex h-screen flex-col">
+          <Header />
+          <div className="container mx-auto flex items-center flex-1 pb-24  px-4">
+            <div />
+            <h2 className="text-3xl font-bold">Projects</h2>
+          </div>
+        </div>
+        <div className="container mx-auto flex-1 pb-24  px-4">
+          <motion.div className="grid grid-cols-2 gap-4">
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </motion.div>
+        </div>
       </main>
 
       <footer className="flex flex-1 py-8 border-t-[1px] border-l-slate-400 justify-center items-center border-solid">

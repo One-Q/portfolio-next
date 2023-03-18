@@ -23,7 +23,9 @@ const Header = () => {
       <div className="font-bold flex">
         {links.map((link) => (
           <div key={link.text} className="relative ml-9">
-            <Link href={link.path}>{link.text}</Link>
+            <Link href={link.path} data-cursor="over">
+              {link.text}
+            </Link>
             <motion.div
               variants={getVariants(router, link)}
               transition={{ delay: 0.3 }}

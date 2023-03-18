@@ -4,9 +4,11 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimatePresence mode="wait">
-      <Component key={router.pathname} {...pageProps} />
-    </AnimatePresence>
+    <div>
+      <AnimatePresence mode="wait">
+        <Component key={router.pathname} {...pageProps} />
+      </AnimatePresence>
+    </div>
   );
 }
 
